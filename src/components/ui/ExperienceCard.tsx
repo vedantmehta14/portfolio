@@ -1,0 +1,37 @@
+import React from 'react';
+import { Experience } from '../../types';
+
+interface ExperienceCardProps {
+  experience: Experience;
+  delay?: number;
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, delay = 0 }) => {
+  return (
+    <div 
+      className="card p-6 animate-fade-in bg-gray-900"
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+        <h3 className="text-xl font-semibold text-white">{experience.title}</h3>
+        <span className="text-gray-300 text-sm md:text-base">{experience.period}</span>
+      </div>
+      <p className="text-blue-400 mb-2 font-medium">{experience.company}</p>
+      <p className="text-gray-200 mb-4">{experience.description}</p>
+      {experience.skills && (
+        <div className="flex flex-wrap gap-2">
+          {experience.skills.map((skill) => (
+            <span
+              key={skill}
+              className="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-200 border border-gray-700"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ExperienceCard;

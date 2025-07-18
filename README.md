@@ -1,46 +1,135 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🌙 Dark mode design
+- 📱 Fully responsive (mobile-first)
+- ⚡ Fast performance with React 18
+- 🎨 Modern UI with smooth animations
+- 🔧 TypeScript for type safety
+- 🎯 SEO optimized
+- 🚀 Easy to customize
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Build Tool**: Create React App
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 16+ 
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server**
+```bash
+npm start
+```
 
-### `npm run eject`
+4. **Build for production**
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Customization
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Personal Information
+Update your details in `src/data/personal.ts`:
+- Name, title, bio
+- Contact information
+- Social media links
+- Profile image
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Skills
+Modify your skills in `src/data/skills.ts`:
+- Add/remove skills
+- Update proficiency levels
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Experience
+Update your work experience in `src/data/experience.ts`:
+- Job titles and companies
+- Descriptions and achievements
+- Skills used
 
-## Learn More
+### Projects
+Showcase your projects in `src/data/projects.ts`:
+- Project details and descriptions
+- Technologies used
+- Live demo and GitHub links
+- Project images
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Styling
+- Colors: Update Tailwind config in `tailwind.config.js`
+- Fonts: Modify font imports in `src/styles/index.css`
+- Animations: Customize animations in CSS or add new ones
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── common/          # Reusable components
+│   ├── sections/        # Page sections
+│   └── ui/              # UI components
+├── data/                # Data files
+├── hooks/               # Custom hooks
+├── types/               # TypeScript types
+├── utils/               # Utility functions
+└── styles/              # Global styles
+```
+
+## Deployment
+
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically
+
+### Netlify
+1. Build the project: `npm run build`
+2. Deploy the `build` folder to Netlify
+
+### GitHub Pages
+1. Install gh-pages: `npm install --save-dev gh-pages`
+2. Add to package.json scripts:
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
+3. Run: `npm run deploy`
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+If you like this project, please give it a ⭐ on GitHub!
+
+For questions or support, reach out to [your-email@example.com](mailto:your-email@example.com).
