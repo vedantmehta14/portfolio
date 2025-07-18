@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black">
       <div className="container">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="animate-fade-in">

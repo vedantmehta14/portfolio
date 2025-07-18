@@ -22,6 +22,10 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const handleNameClick = () => {
+    scrollToSection('hero');
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -34,9 +38,12 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-white">
+            <button 
+              onClick={handleNameClick}
+              className="text-xl font-bold text-white hover:text-gray-300 transition-colors duration-200"
+            >
               {personalInfo.name}
-            </h1>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
