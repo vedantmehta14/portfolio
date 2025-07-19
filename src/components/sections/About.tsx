@@ -1,7 +1,7 @@
 import React from 'react';
 import { personalInfo } from '../../data/personal';
-import { skills } from '../../data/skills';
-import SkillBar from '../ui/SkillBar';
+import { skillsByCategory } from '../../data/skills';
+import SkillIcon from '../ui/SkillBar';
 
 const About: React.FC = () => {
   return (
@@ -29,15 +29,21 @@ const About: React.FC = () => {
             </div>
           </div>
           <div className="animate-fade-in animation-delay-200">
-            <h3 className="text-xl font-semibold mb-4 text-white">Skills</h3>
-            <div className="space-y-3">
-              {skills.map((skill, index) => (
-                <SkillBar
-                  key={skill.name}
-                  name={skill.name}
-                  level={skill.level}
-                  delay={index * 100}
-                />
+            <h3 className="text-xl font-semibold mb-4 text-white">Technical Skills</h3>
+            <div className="space-y-6">
+              {Object.entries(skillsByCategory).map(([category, categorySkills], categoryIndex) => (
+                <div key={category}>
+                  <h4 className="text-sm font-medium text-gray-300 mb-3">{category}</h4>
+                  <div className="flex flex-wrap gap-3">
+                    {categorySkills.map((skill, index) => (
+                      <SkillIcon
+                        key={skill.name}
+                        name={skill.name}
+                        delay={categoryIndex * 200 + index * 50}
+                      />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

@@ -1,36 +1,63 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import {
+  SiPython, SiJavascript, SiTypescript, SiCplusplus, SiMysql,
+  SiReact, SiNodedotjs, SiExpress, SiDjango, SiFlask, SiHtml5, SiCss3,
+  SiAmazon, SiGooglecloud, SiDocker, SiKubernetes, SiGit, SiLinux, SiGnubash
+} from 'react-icons/si';
+import { DiJava } from 'react-icons/di';
 
-interface SkillBarProps {
+interface SkillIconProps {
   name: string;
-  level: number;
   delay?: number;
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ name, level, delay = 0 }) => {
-  const [animatedLevel, setAnimatedLevel] = useState(0);
+// Icon mapping for technologies
+const iconMap: Record<string, any> = {
+  'Python': SiPython,
+  'Java': DiJava,
+  'JavaScript': SiJavascript,
+  'TypeScript': SiTypescript,
+  'C++': SiCplusplus,
+  'SQL': SiMysql,
+  'React': SiReact,
+  'Node.js': SiNodedotjs,
+  'Express.js': SiExpress,
+  'Django': SiDjango,
+  'Flask': SiFlask,
+  'HTML5': SiHtml5,
+  'CSS3': SiCss3,
+  'AWS': SiAmazon,
+  'GCP': SiGooglecloud,
+  'Docker': SiDocker,
+  'Kubernetes': SiKubernetes,
+  'Git': SiGit,
+  'Linux': SiLinux,
+  'Bash': SiGnubash,
+};
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedLevel(level);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [level, delay]);
+const SkillIcon: React.FC<SkillIconProps> = ({ name, delay = 0 }) => {
+  const IconComponent = iconMap[name];
+  
+  if (!IconComponent) {
+    return null;
+  }
 
   return (
-    <div>
-      <div className="flex justify-between mb-1">
-        <span className="text-sm text-gray-200">{name}</span>
-        <span className="text-sm text-gray-300">{level}%</span>
+    <div 
+      className="group relative inline-block animate-fade-in"
+      style={{ animationDelay: `${delay}ms` }}
+    >
+      <div className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-lg border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-colors duration-200 cursor-pointer">
+        <IconComponent className="w-6 h-6 text-gray-200" />
       </div>
-      <div className="w-full bg-gray-800 rounded-full h-2">
-        <div 
-          className="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${animatedLevel}%` }}
-        ></div>
+      
+      {/* Tooltip */}
+      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap border border-gray-700">
+        {name}
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900"></div>
       </div>
     </div>
   );
 };
 
-export default SkillBar;
+export default SkillIcon;
