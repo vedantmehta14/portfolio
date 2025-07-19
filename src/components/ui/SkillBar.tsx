@@ -5,6 +5,7 @@ import {
   SiAmazon, SiGooglecloud, SiDocker, SiKubernetes, SiGit, SiLinux, SiGnubash
 } from 'react-icons/si';
 import { DiJava } from 'react-icons/di';
+import { useTheme } from '../../contexts/ThemeContext';
 
 interface SkillIconProps {
   name: string;
@@ -35,8 +36,8 @@ const iconMap: Record<string, any> = {
   'Bash': SiGnubash,
 };
 
-// Brand colors for each technology
-const colorMap: Record<string, string> = {
+// Brand colors for each technology - dark theme
+const darkColorMap: Record<string, string> = {
   'Python': '#3776ab',
   'Java': '#007396',
   'JavaScript': '#f7df1e',
@@ -59,9 +60,19 @@ const colorMap: Record<string, string> = {
   'Bash': '#4eaa25',
 };
 
+// Brand colors for light theme - adjust Flask, Express, and Linux
+const lightColorMap: Record<string, string> = {
+  ...darkColorMap,
+  'Express.js': '#000000',  // Black for light mode
+  'Flask': '#000000',       // Black for light mode
+  'Linux': '#e6a000',       // Darker yellow for light mode (better contrast)
+};
+
 const SkillIcon: React.FC<SkillIconProps> = ({ name, delay = 0 }) => {
+  const { theme } = useTheme();
   const IconComponent = iconMap[name];
-  const iconColor = colorMap[name] || '#ffffff';
+  const colorMap = theme === 'dark' ? darkColorMap : lightColorMap;
+  const iconColor = colorMap[name] || (theme === 'dark' ? '#ffffff' : '#000000');
   
   if (!IconComponent) {
     return null;
@@ -77,9 +88,9 @@ const SkillIcon: React.FC<SkillIconProps> = ({ name, delay = 0 }) => {
       </div>
       
       {/* Tooltip */}
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap border border-gray-700">
+      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 dark:bg-gray-900 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap border border-gray-600 dark:border-gray-700">
         {name}
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-900"></div>
+        <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-800 dark:border-t-gray-900"></div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ interface EducationCardProps {
 const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) => {
   return (
     <div 
-      className="card p-6 animate-fade-in bg-gray-900"
+      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-900"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-start gap-4 mb-4">
@@ -24,24 +24,24 @@ const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) =
         )}
         <div className="flex-1">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-            <h3 className="text-xl font-semibold text-white">{education.degree}</h3>
-            <span className="text-gray-300 text-sm md:text-base">{education.period}</span>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
+            <span className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{education.period}</span>
           </div>
-          <p className="text-blue-400 mb-2 font-medium">{education.institution}</p>
+          <p className="text-blue-600 dark:text-blue-400 mb-2 font-medium">{education.institution}</p>
           {education.gpa && (
-            <p className="text-gray-300 mb-2">GPA: {education.gpa}</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-2">GPA: {education.gpa}</p>
           )}
         </div>
       </div>
       {education.description && (
-        <p className="text-gray-200 mb-4">{education.description}</p>
+        <p className="text-gray-700 dark:text-gray-200 mb-4">{education.description}</p>
       )}
       {education.achievements && education.achievements.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {education.achievements.map((achievement, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-200 border border-gray-700"
+              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-sm rounded-full text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700"
             >
               {achievement}
             </span>

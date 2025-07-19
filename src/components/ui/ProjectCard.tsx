@@ -10,7 +10,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
   return (
     <div 
-      className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 hover:transform hover:scale-105 animate-fade-in"
+      className="bg-gray-100 dark:bg-gray-900 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 transition-all duration-300 animate-fade-in"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="relative overflow-hidden">
@@ -27,10 +27,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-white">
+        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
           {project.title}
         </h3>
-        <p className="text-gray-200 mb-4 text-sm leading-relaxed">
+        <p className="text-gray-700 dark:text-gray-200 mb-4 text-sm leading-relaxed">
           {project.description}
         </p>
         
@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
           {project.tags.map((tag) => (
             <span 
               key={tag} 
-              className="px-3 py-1 bg-gray-800 text-gray-200 text-xs rounded-full border border-gray-700"
+              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-xs rounded-full border border-gray-300 dark:border-gray-700"
             >
               {tag}
             </span>
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             >
               <ExternalLink size={16} />
               Live Demo
@@ -62,10 +62,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-300 hover:text-gray-200 transition-colors text-sm font-medium"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-900 dark:text-white text-sm font-medium rounded-lg transition-colors duration-200"
             >
               <Github size={16} />
-              Source Code
+              Code
             </a>
           )}
         </div>

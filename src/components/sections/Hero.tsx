@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className="container">
         <div className="flex flex-col items-center justify-center text-center">
           <div className="animate-fade-in">
@@ -32,11 +32,11 @@ const Hero: React.FC = () => {
                 />
               </div>
               <div>
-                <div className="text-gray-300 mb-2">Hello, I'm</div>
+                <div className="text-gray-600 dark:text-gray-300 mb-2">Hello, I'm</div>
                 <h1 className="text-4xl lg:text-5xl font-bold mb-2 text-gradient">
                   {personalInfo.name}
                 </h1>
-                <p className="text-xl text-gray-200 mb-4">{personalInfo.title}</p>
+                <p className="text-xl text-gray-700 dark:text-gray-200 mb-4">{personalInfo.title}</p>
                 
                 <div className="flex gap-3 mb-4 justify-center">
                   <Button
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-white transition-colors duration-200"
+                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                     >
                       {link.icon === 'linkedin' && <Linkedin size={24} />}
                       {link.icon === 'github' && <Github size={24} />}

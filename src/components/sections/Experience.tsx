@@ -4,9 +4,9 @@ import ExperienceCard from '../ui/ExperienceCard';
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="section-padding bg-black">
+    <section id="experience" className="section-padding bg-white dark:bg-black">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center text-white">Experience</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Experience</h2>
         <div className="space-y-6">
           {experiences.map((experience, index) => (
             <ExperienceCard 

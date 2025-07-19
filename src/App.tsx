@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Hero from './components/sections/Hero';
@@ -10,18 +11,20 @@ import Contact from './components/sections/Contact';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Education />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
