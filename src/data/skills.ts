@@ -6,7 +6,6 @@ export const skills: Skill[] = [
   { name: 'Java', category: 'Languages' },
   { name: 'JavaScript', category: 'Languages' },
   { name: 'TypeScript', category: 'Languages' },
-  { name: 'C', category: 'Languages' },
   { name: 'C++', category: 'Languages' },
   { name: 'SQL', category: 'Languages' },
 
