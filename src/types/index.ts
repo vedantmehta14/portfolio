@@ -31,6 +31,7 @@ export interface Experience {
   period: string;
   description: string;
   skills?: string[];
+  image?: string;
 }
 
 export interface Education {
@@ -40,6 +41,7 @@ export interface Education {
   description?: string;
   gpa?: string;
   achievements?: string[];
+  image?: string;
 }
 
 export interface Project {
