@@ -5,10 +5,7 @@ export const personalInfo: PersonalInfo = {
   title: 'Software Developer',
   email: 'mehtavedant8@gmail.com',
   location: 'San Jose, CA',
-  availability: 'Available',
-  bio: `I'm a passionate software developer with over 5 years of experience creating 
-        beautiful, functional, and user-friendly web applications. I specialize in 
-        modern JavaScript frameworks and have a keen eye for design.`,
+  bio: `I'm a passionate software developer currently pursuing my Masters at SJSU, with experience from 3 internships. I build beautiful, user-friendly full stack web applications and have hands-on expertise in cloud infrastructure and orchestration tools like Kubernetes. I work primarily with Python and JavaScript.`,
   profileImage: '/images/profile.jpeg',
   cvUrl: '/files/Vedant_Mehta_Resume_Summer_Intern.pdf',
 };

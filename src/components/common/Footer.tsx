@@ -9,22 +9,6 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-100 dark:bg-gray-800 py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-300 dark:border-gray-800">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center justify-center text-center">
-          {/* <div className="flex gap-6 mb-6">
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-              >
-                {link.icon === 'linkedin' && <Linkedin size={24} />}
-                {link.icon === 'github' && <Github size={24} />}
-                {link.icon === 'leetcode' && <Code size={24} />}
-              </a>
-            ))}
-          </div> */}
-          
           <div className="text-gray-600 dark:text-gray-300 text-sm">
             <p className="mb-2">
               © {currentYear} {personalInfo.name}. All rights reserved.

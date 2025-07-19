@@ -15,16 +15,8 @@ const About: React.FC = () => {
             </p>
             <div className="space-y-4">
               <div className="flex justify-between">
-                <span className="text-gray-600 dark:text-gray-300">Experience</span>
-                <span className="text-gray-900 dark:text-white">5+ Years</span>
-              </div>
-              <div className="flex justify-between">
                 <span className="text-gray-600 dark:text-gray-300">Location</span>
                 <span className="text-gray-900 dark:text-white">{personalInfo.location}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600 dark:text-gray-300">Availability</span>
-                <span className="text-green-600 dark:text-green-400">{personalInfo.availability}</span>
               </div>
             </div>
           </div>

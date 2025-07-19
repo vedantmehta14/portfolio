@@ -9,7 +9,6 @@ export interface PersonalInfo {
   title: string;
   email: string;
   location: string;
-  availability: string;
   bio: string;
   profileImage: string;
   cvUrl: string;

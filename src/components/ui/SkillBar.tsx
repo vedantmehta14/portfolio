@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  SiPython, SiJavascript, SiTypescript, SiCplusplus, SiMysql,
+  SiPython, SiJavascript, SiTypescript, SiC, SiCplusplus, SiMysql,
   SiReact, SiNodedotjs, SiExpress, SiDjango, SiFlask, SiHtml5, SiCss3,
   SiAmazon, SiGooglecloud, SiDocker, SiKubernetes, SiGit, SiLinux, SiGnubash
 } from 'react-icons/si';
@@ -18,6 +18,7 @@ const iconMap: Record<string, any> = {
   'Java': DiJava,
   'JavaScript': SiJavascript,
   'TypeScript': SiTypescript,
+  'C': SiC,
   'C++': SiCplusplus,
   'SQL': SiMysql,
   'React': SiReact,
@@ -42,6 +43,7 @@ const darkColorMap: Record<string, string> = {
   'Java': '#007396',
   'JavaScript': '#f7df1e',
   'TypeScript': '#3178c6',
+  'C': '#A8B9CC',
   'C++': '#00599c',
   'SQL': '#4479a1',
   'React': '#61dafb',
