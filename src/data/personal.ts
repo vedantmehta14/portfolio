@@ -10,7 +10,7 @@ export const personalInfo: PersonalInfo = {
         beautiful, functional, and user-friendly web applications. I specialize in 
         modern JavaScript frameworks and have a keen eye for design.`,
   profileImage: '/images/profile.jpeg',
-  cvUrl: '/files/john-doe-cv.pdf',
+  cvUrl: '/files/Vedant_Mehta_Resume_Summer_Intern.pdf',
 };
 
 export const socialLinks: SocialLink[] = [

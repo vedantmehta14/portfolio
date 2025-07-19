@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = personalInfo.cvUrl;
-    link.download = `${personalInfo.name.replace(' ', '-')}-CV.pdf`;
+    link.download = 'Vedant_Mehta_Resume.pdf';
     link.click();
   };
 
