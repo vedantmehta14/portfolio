@@ -5,7 +5,7 @@ export const education: Education[] = [
     degree: 'Master of Science in Software Engineering',
     institution: 'San Jose State University',
     period: 'Aug 2024 - May 2026',
-    description: 'Specialized in Software Engineering and Data Science. Focused on advanced algorithms, machine learning, and software architecture.',
+    description: 'Specialized in Enterprise Software Technologies. Focused on advanced algorithms, machine learning, and software architecture.',
     gpa: '3.66/4.0',
     achievements: ['Graduate Research Assistant', 'Dean\'s List', 'Teaching Assistant for Data Structures'],
     image: '/images/sjsu.png',

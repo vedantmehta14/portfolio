@@ -1,5 +1,6 @@
 import React from 'react';
 import { Experience } from '../../types';
+import SkillIcon from './SkillBar';
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -9,7 +10,7 @@ interface ExperienceCardProps {
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, delay = 0 }) => {
   return (
     <div 
-      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-800"
+      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-800 transition-colors duration-300"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-start gap-4 mb-4">
@@ -32,14 +33,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, delay = 0 }
       </div>
       <p className="text-gray-700 dark:text-gray-200 mb-4">{experience.description}</p>
       {experience.skills && (
-        <div className="flex flex-wrap gap-2">
-          {experience.skills.map((skill) => (
-            <span
+        <div className="flex flex-wrap gap-3 justify-start">
+          {experience.skills.map((skill, index) => (
+            <SkillIcon
               key={skill}
-              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-sm rounded-full text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700"
-            >
-              {skill}
-            </span>
+              name={skill}
+              delay={index * 50}
+            />
           ))}
         </div>
       )}

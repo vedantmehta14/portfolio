@@ -40,12 +40,12 @@ const Header: React.FC = () => {
       {/* Mobile Navigation Menu - positioned outside header */}
       {isMenuOpen && (
         <div className="fixed top-16 left-4 right-4 z-[10000] md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 shadow-2xl">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 rounded-lg border border-gray-300 dark:border-gray-600 shadow-2xl transition-colors duration-300">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200 rounded-md"
+                className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-300 rounded-md"
               >
                 {item.label}
               </button>
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
             <div className="flex justify-start">
               <button 
                 onClick={handleNameClick}
-                className="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+                className="text-xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
               >
                 {personalInfo.name}
               </button>
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                   <button
                     key={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200"
+                    className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300"
                   >
                     {item.label}
                   </button>
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
               <ThemeToggle />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white p-2"
+                className="md:hidden text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white p-2 transition-colors duration-300"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>

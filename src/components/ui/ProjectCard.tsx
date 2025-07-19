@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
           className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
         />
         {project.featured && (
-          <div className="absolute top-4 right-4 bg-gray-600 dark:bg-gray-700 text-white px-2 py-1 rounded-full text-xs font-medium">
+          <div className="absolute top-4 right-4 bg-gray-600 dark:bg-gray-700 text-white px-2 py-1 rounded-full text-xs font-medium transition-colors duration-300">
             Featured
           </div>
         )}
@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
           {project.tags.map((tag) => (
             <span 
               key={tag} 
-              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-xs rounded-full border border-gray-300 dark:border-gray-700"
+              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-xs rounded-full border border-gray-300 dark:border-gray-700 transition-colors duration-300"
             >
               {tag}
             </span>
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-900 dark:text-white text-sm font-medium rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-900 dark:text-white text-sm font-medium rounded-lg transition-colors duration-300"
             >
               <ExternalLink size={16} />
               Live Demo
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-900 dark:text-white text-sm font-medium rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-900 dark:text-white text-sm font-medium rounded-lg transition-colors duration-300"
             >
               <Github size={16} />
               Code

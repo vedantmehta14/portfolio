@@ -9,7 +9,7 @@ interface EducationCardProps {
 const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) => {
   return (
     <div 
-      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-800"
+      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-800 transition-colors duration-300"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-start gap-4 mb-4">
@@ -41,7 +41,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) =
           {education.achievements.map((achievement, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-sm rounded-full text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700"
+              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-sm rounded-full text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 transition-colors duration-300"
             >
               {achievement}
             </span>

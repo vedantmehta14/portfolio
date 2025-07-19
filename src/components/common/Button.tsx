@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   className = '',
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-full transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variantClasses = {
     primary: 'bg-blue-600 hover:bg-blue-700 text-white',

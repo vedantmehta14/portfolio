@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
                     >
                       {link.icon === 'linkedin' && <Linkedin size={24} />}
                       {link.icon === 'github' && <Github size={24} />}

@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a
             href={getContactUrl('email')}
-            className="card p-6 text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 block"
+            className="card p-6 text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 block"
           >
             <Mail className="w-8 h-8 mx-auto mb-4 text-gray-600 dark:text-gray-300" />
             <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">Email</h3>
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
             href={getContactUrl('linkedin')}
             target="_blank"
             rel="noopener noreferrer"
-            className="card p-6 text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 block"
+            className="card p-6 text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 block"
           >
             <Linkedin className="w-8 h-8 mx-auto mb-4 text-gray-600 dark:text-gray-300" />
             <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">LinkedIn</h3>
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
             href={getContactUrl('github')}
             target="_blank"
             rel="noopener noreferrer"
-            className="card p-6 text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 block"
+            className="card p-6 text-center bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 block"
           >
             <Github className="w-8 h-8 mx-auto mb-4 text-gray-600 dark:text-gray-300" />
             <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">GitHub</h3>
