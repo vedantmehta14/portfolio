@@ -35,8 +35,33 @@ const iconMap: Record<string, any> = {
   'Bash': SiGnubash,
 };
 
+// Brand colors for each technology
+const colorMap: Record<string, string> = {
+  'Python': '#3776ab',
+  'Java': '#007396',
+  'JavaScript': '#f7df1e',
+  'TypeScript': '#3178c6',
+  'C++': '#00599c',
+  'SQL': '#4479a1',
+  'React': '#61dafb',
+  'Node.js': '#339933',
+  'Express.js': '#ffffff',
+  'Django': '#44b78b',
+  'Flask': '#ffffff',
+  'HTML5': '#e34f26',
+  'CSS3': '#1572b6',
+  'AWS': '#ff9900',
+  'GCP': '#4285f4',
+  'Docker': '#2496ed',
+  'Kubernetes': '#326ce5',
+  'Git': '#f05032',
+  'Linux': '#fcc624',
+  'Bash': '#4eaa25',
+};
+
 const SkillIcon: React.FC<SkillIconProps> = ({ name, delay = 0 }) => {
   const IconComponent = iconMap[name];
+  const iconColor = colorMap[name] || '#ffffff';
   
   if (!IconComponent) {
     return null;
@@ -47,8 +72,8 @@ const SkillIcon: React.FC<SkillIconProps> = ({ name, delay = 0 }) => {
       className="group relative inline-block animate-fade-in"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-lg border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-colors duration-200 cursor-pointer">
-        <IconComponent className="w-6 h-6 text-gray-200" />
+      <div className="w-12 h-12 flex items-center justify-center rounded-lg hover:scale-110 transition-all duration-200 cursor-pointer">
+        <IconComponent className="w-8 h-8" style={{ color: iconColor }} />
       </div>
       
       {/* Tooltip */}
