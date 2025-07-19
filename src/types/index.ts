@@ -1,6 +1,6 @@
-export interface NavItem {
-  label: string;
-  href: string;
+export interface Skill {
+  name: string;
+  level: number;
 }
 
 export interface PersonalInfo {
@@ -20,9 +20,9 @@ export interface SocialLink {
   icon: string;
 }
 
-export interface Skill {
-  name: string;
-  level: number;
+export interface NavItem {
+  label: string;
+  href: string;
 }
 
 export interface Experience {
@@ -31,6 +31,15 @@ export interface Experience {
   period: string;
   description: string;
   skills?: string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+  description?: string;
+  gpa?: string;
+  achievements?: string[];
 }
 
 export interface Project {

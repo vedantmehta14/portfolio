@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-black/90 backdrop-blur-md border-b border-gray-800' 
+          ? 'bg-black/90 backdrop-blur-md' 
           : 'bg-black/50'
       }`}
     >
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <div className="flex items-baseline space-x-8">
+            <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <button
                   key={item.href}

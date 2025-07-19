@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Download, Linkedin, Github } from 'lucide-react';
+import { Menu, Download, Linkedin, Github, Code } from 'lucide-react';
 import { personalInfo, socialLinks } from '../../data/personal';
 import Button from '../common/Button';
 
@@ -45,7 +45,7 @@ const MobileCard: React.FC = () => {
           </Button>
           <Button
             size="sm"
-            variant="primary"
+            variant="secondary"
             onClick={handleContactInfo}
           >
             Contact Info
@@ -53,7 +53,7 @@ const MobileCard: React.FC = () => {
         </div>
         
         <div className="flex justify-center gap-4">
-          {socialLinks.slice(0, 2).map((link) => (
+          {socialLinks.slice(0, 3).map((link) => (
             <a
               key={link.name}
               href={link.url}
@@ -63,6 +63,7 @@ const MobileCard: React.FC = () => {
             >
               {link.icon === 'linkedin' && <Linkedin size={20} />}
               {link.icon === 'github' && <Github size={20} />}
+              {link.icon === 'leetcode' && <Code size={20} />}
             </a>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Linkedin, Github } from 'lucide-react';
+import { Download, Linkedin, Github, Code } from 'lucide-react';
 import { personalInfo, socialLinks } from '../../data/personal';
 import Button from '../common/Button';
 
@@ -62,6 +62,7 @@ const Hero: React.FC = () => {
                     >
                       {link.icon === 'linkedin' && <Linkedin size={24} />}
                       {link.icon === 'github' && <Github size={24} />}
+                      {link.icon === 'leetcode' && <Code size={24} />}
                     </a>
                   ))}
                 </div>
