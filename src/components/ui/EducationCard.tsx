@@ -9,7 +9,7 @@ interface EducationCardProps {
 const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) => {
   return (
     <div 
-      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-900"
+      className="card p-6 animate-fade-in bg-gray-100 dark:bg-gray-800"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-start gap-4 mb-4">
@@ -27,7 +27,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) =
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{education.degree}</h3>
             <span className="text-gray-600 dark:text-gray-300 text-sm md:text-base">{education.period}</span>
           </div>
-          <p className="text-blue-600 dark:text-blue-400 mb-2 font-medium">{education.institution}</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-2 font-medium">{education.institution}</p>
           {education.gpa && (
             <p className="text-gray-600 dark:text-gray-300 mb-2">GPA: {education.gpa}</p>
           )}
