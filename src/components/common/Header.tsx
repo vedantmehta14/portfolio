@@ -32,7 +32,7 @@ const Header: React.FC = () => {
       {/* Mobile Navigation Backdrop - positioned outside header */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/40 backdrop-blur-lg z-[9999] md:hidden"
+          className="fixed inset-0 bg-black/40 z-[9999] md:hidden"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
