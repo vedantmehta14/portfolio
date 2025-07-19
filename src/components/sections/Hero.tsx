@@ -2,8 +2,11 @@ import React from 'react';
 import { Download, Linkedin, Github, Code } from 'lucide-react';
 import { personalInfo, socialLinks } from '../../data/personal';
 import Button from '../common/Button';
+import { useScrollToSection } from '../../hooks/useScrollToSection';
 
 const Hero: React.FC = () => {
+  const scrollToSection = useScrollToSection();
+
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = personalInfo.cvUrl;
@@ -12,7 +15,7 @@ const Hero: React.FC = () => {
   };
 
   const handleContactInfo = () => {
-    window.location.href = `mailto:${personalInfo.email}`;
+    scrollToSection('contact');
   };
 
   return (
