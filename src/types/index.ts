@@ -38,9 +38,8 @@ export interface Education {
   degree: string;
   institution: string;
   period: string;
-  description?: string;
   gpa?: string;
-  achievements?: string[];
+  coursework?: string[];
   image?: string;
 }
 
@@ -48,10 +47,8 @@ export interface Project {
   title: string;
   description: string;
   image: string;
-  tags: string[];
-  demoUrl?: string;
+  techStack: string[];
   githubUrl?: string;
-  featured?: boolean;
 }
 
 export interface ContactMethod {

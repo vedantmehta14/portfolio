@@ -5,7 +5,7 @@ export const experiences: Experience[] = [
     title: 'Software Engineer Intern',
     company: 'Juniper Networks',
     period: 'May 2025 - Aug 2025',
-    description: 'Worked on network management systems and contributed to the development of monitoring tools. Gained experience in networking protocols and system optimization.',
+    description: 'Deployed Juniper\'s virtualized firewall (vSRX), a VM-based solution, into a Kubernetes environment using KubeVirt, enabling containerized orchestration of the firewall. Packaged the deployment with Helm charts and integrated custom networking plugins to provision additional networks within the cluster.',
     skills: ['Kubernetes', 'Kubevirt', 'Helm', 'Python', 'Linux'],
     image: '/images/juniper.png',
   },

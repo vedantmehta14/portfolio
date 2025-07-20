@@ -33,19 +33,12 @@ const EducationCard: React.FC<EducationCardProps> = ({ education, delay = 0 }) =
           )}
         </div>
       </div>
-      {education.description && (
-        <p className="text-gray-700 dark:text-gray-200 mb-4">{education.description}</p>
-      )}
-      {education.achievements && education.achievements.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {education.achievements.map((achievement, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-sm rounded-full text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 transition-colors duration-300"
-            >
-              {achievement}
-            </span>
-          ))}
+      {education.coursework && education.coursework.length > 0 && (
+        <div>
+          <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Relevant Coursework</h4>
+          <p className="text-gray-700 dark:text-gray-200 text-sm">
+            {education.coursework.join(', ')}
+          </p>
         </div>
       )}
     </div>

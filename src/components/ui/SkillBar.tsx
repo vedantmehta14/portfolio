@@ -3,10 +3,10 @@ import {
   SiPython, SiJavascript, SiTypescript, SiCplusplus, SiMysql,
   SiReact, SiNodedotjs, SiExpress, SiDjango, SiFlask, SiHtml5, SiCss3,
   SiAmazon, SiGooglecloud, SiDocker, SiKubernetes, SiGit, SiLinux, SiGnubash,
-  SiHelm
+  SiHelm, SiMongodb, SiSocketdotio, SiOpenai
 } from 'react-icons/si';
 import { DiJava } from 'react-icons/di';
-import { MdOutlineSpeed, MdBugReport, MdCloud } from 'react-icons/md';
+import { MdOutlineSpeed, MdBugReport, MdCloud, MdChat, MdSearch } from 'react-icons/md';
 import { useTheme } from '../../contexts/ThemeContext';
 
 interface SkillIconProps {
@@ -40,6 +40,11 @@ const iconMap: Record<string, any> = {
   'Linux': SiLinux,
   'Bash': SiGnubash,
   'Helm': SiHelm,
+  'MongoDB': SiMongodb,
+  'WebSocket': SiSocketdotio,
+  'OpenAI GPT-4': SiOpenai,
+  'ColPali': MdSearch, // Use search icon for ColPali (document retrieval)
+  'RAG': MdChat, // Use chat icon for RAG (retrieval augmented generation)
   'ServiceNow': MdCloud, // Use cloud icon for ServiceNow
   'Agile': MdOutlineSpeed, // Use speed icon for Agile
   'Testing': MdBugReport, // Use bug report icon for Testing
@@ -71,6 +76,11 @@ const darkColorMap: Record<string, string> = {
   'Linux': '#fcc624',
   'Bash': '#4eaa25',
   'Helm': '#80b3ff', // Lighter blue for dark mode
+  'MongoDB': '#47a248',
+  'WebSocket': '#010101',
+  'OpenAI GPT-4': '#412991',
+  'ColPali': '#00b4d8',
+  'RAG': '#ff6b6b',
   'ServiceNow': '#62d84e',
   'Agile': '#00b4d8',
   'Testing': '#ff6b6b',
@@ -83,6 +93,10 @@ const lightColorMap: Record<string, string> = {
   'Flask': '#000000',       // Black for light mode
   'Linux': '#e6a000',       // Darker yellow for light mode (better contrast)
   'Helm': '#0f1689',        // Original dark blue for light mode
+  'WebSocket': '#000000',   // Black for light mode
+  'OpenAI GPT-4': '#2d1b69', // Darker purple for light mode
+  'ColPali': '#0077b6',     // Darker blue for light mode
+  'RAG': '#d63031',         // Darker red for light mode
   'Agile': '#0077b6',       // Darker blue for light mode
   'Testing': '#d63031',     // Darker red for light mode
 };
