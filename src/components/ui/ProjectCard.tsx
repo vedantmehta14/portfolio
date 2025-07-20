@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, delay = 0 }) => {
       className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-300 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-700 transition-all duration-300 animate-fade-in"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="relative overflow-hidden pt-6 px-6">
+      <div className="relative overflow-hidden pt-3 md:pt-6 px-6">
         <img 
           src={project.image} 
           alt={project.title}
