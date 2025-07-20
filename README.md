@@ -15,7 +15,7 @@ A modern, responsive portfolio website showcasing my experience as a Software De
 
 ## 🚀 Live Demo
 
-Visit the live website: [vedantmehta.](https://vedantmehta.dev)me
+Visit the live website: [vedantmehta.me](https://vedantmehta.me)
 
 ## 🛠️ Tech Stack
 
@@ -155,7 +155,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-**Vedant Mehta**Software Developer | Master's Student at SJSU
+**Vedant Mehta**  
+Software Developer | Master's Student at SJSU
 
 - 📧 Email: [mehtavedant8@gmail.com](mailto:mehtavedant8@gmail.com)
 - 🔗 LinkedIn: [linkedin.com/in/vedantmehta14](https://www.linkedin.com/in/vedantmehta14/)
