@@ -15,7 +15,7 @@ A modern, responsive portfolio website showcasing my experience as a Software De
 
 ## 🚀 Live Demo
 
-Visit the live website: [vedantmehta.dev](https://vedantmehta.dev)
+Visit the live website: [vedantmehta.](https://vedantmehta.dev)me
 
 ## 🛠️ Tech Stack
 
