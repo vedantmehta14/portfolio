@@ -62,7 +62,7 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:grid md:grid-cols-3">
+          <div className="flex items-center justify-between h-16 md:grid md:grid-cols-3 md:gap-4">
             {/* Left: Logo */}
             <div className="flex justify-start">
               <button 
@@ -75,12 +75,12 @@ const Header: React.FC = () => {
 
             {/* Center: Desktop Navigation */}
             <nav className="hidden md:flex justify-center">
-              <div className="flex items-baseline space-x-4">
+              <div className="flex items-center space-x-1 lg:space-x-4">
                 {navItems.map((item) => (
                   <button
                     key={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300"
+                    className="text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white px-2 lg:px-3 py-2 text-sm font-medium transition-colors duration-300 cursor-pointer relative z-10"
                   >
                     {item.label}
                   </button>
@@ -90,7 +90,9 @@ const Header: React.FC = () => {
 
             {/* Right: Theme Toggle and Mobile menu button */}
             <div className="flex justify-end items-center space-x-2">
-              <ThemeToggle />
+              <div className="relative z-0">
+                <ThemeToggle />
+              </div>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white p-2 transition-colors duration-300"
